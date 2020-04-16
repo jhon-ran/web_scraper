@@ -1,4 +1,4 @@
-# This program scraps the list of all French deputies & places their names and emais into a Hash.
+# This program scraps the list of all French deputies & places their names and emais in a Hash.
 require 'pry'
 require 'rubygems'
 require 'nokogiri'
@@ -29,7 +29,7 @@ end
 
 def get_emails (deputes_names)
 
-  deputes_email_array = []
+  array_emails = []
 
   # Don't go over 50 or it gets really slow
   for n in 0...30
@@ -41,14 +41,14 @@ def get_emails (deputes_names)
 
     # Catching for error!
     begin
-      deputes_email_array << depute_page.xpath("//*[contains(@class, 'deputes-liste-attributs')]/dd[4]/ul/li[2]/a/text()").to_s
+      array_emails << depute_page.xpath("//*[contains(@class, 'deputes-liste-attributs')]/dd[4]/ul/li[2]/a/text()").to_s
     rescue => e
 
-        deputes_email_array << " "
+      array_emails << " "
       end
   end
 
-  return deputes_email_array
+  return array_emails
 end
 
-puts email_ville_result = Hash[get_names.zip(get_emails(get_links))]
+puts Hash[get_names.zip(get_emails(get_links))]
