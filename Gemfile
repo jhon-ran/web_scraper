@@ -1,8 +1,8 @@
-
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gem 'dotenv'
-gem 'rspec'
 gem 'pry'
-gem 'rubocop'
 gem 'nokogiri'
+gem 'rspec'
+gem 'rubocop'
+
