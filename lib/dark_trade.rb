@@ -1,3 +1,4 @@
+# This program scraps all the cryiptocurrencies and place them into a Hash containing acronym & price.
 require 'nokogiri'   
 require 'open-uri'
 require 'pry'

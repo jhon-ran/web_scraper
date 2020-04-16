@@ -1,3 +1,4 @@
+# This program scraps the list of all French deputies & places their names and emais into a Hash.
 require 'pry'
 require 'rubygems'
 require 'nokogiri'
@@ -31,7 +32,7 @@ def get_emails (deputes_names)
   deputes_email_array = []
 
   # Don't go over 50 or it gets really slow
-  for n in 0...10
+  for n in 0...30
 
     page = "http://www2.assemblee-nationale.fr/#{deputes_names[n]}"
 

@@ -1,3 +1,5 @@
+#This program scraps the names & emails from a town hall district in France. 
+#It places them into a Hash.
 require 'pry'
 require 'rubygems'
 require 'nokogiri'
